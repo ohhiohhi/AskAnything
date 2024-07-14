@@ -8,7 +8,7 @@
   1.[RASA](https://github.com/RasaHQ/rasa)
   2.[Qanything](https://github.com/netease-youdao/qanything)
   3.[MaxKB](https://github.com/1panel-dev/MaxKB)
-* 调研LangChain、LlamaIndex等技术框架
+* 调研[LangChain](https://github.com/langchain-ai/langchain)、[LlamaIndex](https://github.com/run-llama/llama_index)等技术框架
 * 调研RAG、Embedding模型、Rerank等技术的原理，在搜索时的具体的应用场景和作用
 ## 产品框架
 * 技术框架
