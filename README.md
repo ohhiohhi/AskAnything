@@ -24,26 +24,26 @@
 
 |   |  原理（流程图）  |  支持任务  |  功能点  |  优点  |  缺点  |
 | --- | --- | --- | --- | --- | --- |
-|  RASA  |  Rasa基于意图的问答 ![rasa-流程图.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/MAeqxYDQEpgdO8j9/img/24130173-e09b-4319-9d0d-5725da474ab9.png) Rasa基于LLM和RAG的意图分类 ![image](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/MAeqxYDQEpgdO8j9/img/7678f410-c217-4129-afac-2e4cd68b494d.png)  |  FAQ问答  |  1.意图识别 2.实体抽取 3.上下文记忆 4.自定义动作  |1.支持纯本地部署 2.具有模块化框架 3.可以外接知识图谱 4.可自定义回复动作       |  功能缺点：1.不能进行文档问答. 模型缺点：1.组件的ML和DL模型组件过时 2.每次更新示例时需要重新训练       |
-|  [QAnything](https://qanything.ai/docs/introduce)  |  基于RAG的两阶段检索机制，结合信息检索和文本生成![image.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/MAeqxYDQEpgdO8j9/img/3312fb3c-66cd-4a09-89bf-1b6873e351d1.png) 参数设置：1.检索：不设置阈值，返回TOP K. 2.重排：阈值0.35       |  1.文档问答 2.FAQ问答  |  1.文档解析 2.混合检索（BM25+向量检索） 3.联网检索 4.业务场景定制 5.对话日志  |  1.支持纯本地部署 2.无文档数量上限 3.问答准确率高 4.支持多语言       |  数据侧：1.处理非结构化文档存在困难 2.从图片、pdf等非文本格式提取信息 3.文档数量增加，检索速度和生成效率      模型侧：1.大模型计算资源消耗大 2.对特定领域数据的依赖等问题       |
-|  [MaxKB](https://maxkb.cn/docs/system_arch/)  |  ![image.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/MAeqxYDQEpgdO8j9/img/b396642d-0f50-4cca-afae-c3b818282e2b.png)  |   |  1.  知识库：1.多格式文档导入、自动分段向量化；命中检测 2.  应用：      Agent工作流；嵌入第三方；对话日志；访问限制；用量统计;系统管理       |  1.开箱即用      2.多格式多类型文档，在线/离线，文本自动拆分、向量化、RAG 3.无缝嵌入:可以快速嵌入到第三方系统 4.灵活编排:工作流配置 5.模型中立:可自行接入其他大模型  |  模型：1.召回相似度Top N问题       |
-|  智谱AI  |  ![image](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ldVyDdEEvqBQN/img/193b8094-eea9-413c-8a32-faf9c5ed03aa.jpg) 参数设置：1.重排：文本得分+向量得分，权重分别为0.3和0.7       |   |  1.query改写 2.路由 3.多路召回 4.文本检索+向量检索（ES混合检索）  |   |   |
+|  RASA  |  Rasa基于意图的问答 ![rasa-流程图.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/MAeqxYDQEpgdO8j9/img/24130173-e09b-4319-9d0d-5725da474ab9.png) Rasa基于LLM和RAG的意图分类 ![image](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/MAeqxYDQEpgdO8j9/img/7678f410-c217-4129-afac-2e4cd68b494d.png)  |  FAQ问答  |  1.意图识别\n 2.实体抽取\n 3.上下文记忆\n 4.自定义动作  |1.支持纯本地部署\n 2.具有模块化框架\n 3.可以外接知识图谱\n 4.可自定义回复动作       |  功能缺点：1.不能进行文档问答.\n 模型缺点：1.组件的ML和DL模型组件过时\n 2.每次更新示例时需要重新训练       |
+|  [QAnything](https://qanything.ai/docs/introduce)  |  基于RAG的两阶段检索机制，结合信息检索和文本生成![image.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/MAeqxYDQEpgdO8j9/img/3312fb3c-66cd-4a09-89bf-1b6873e351d1.png) 参数设置：\n1.检索：不设置阈值，返回TOP K.\n 2.重排：阈值0.35       |  1.文档问答\n 2.FAQ问答  |  1.文档解析\n 2.混合检索（BM25+向量检索）\n 3.联网检索\n 4.业务场景定制\n 5.对话日志  |  1.支持纯本地部署\n 2.无文档数量上限\n 3.问答准确率高\n 4.支持多语言       |  数据侧：\n1.处理非结构化文档存在困难\n 2.从图片、pdf等非文本格式提取信息\n 3.文档数量增加，检索速度和生成效率      模型侧：\n1.大模型计算资源消耗大\n 2.对特定领域数据的依赖等问题       |
+|  [MaxKB](https://maxkb.cn/docs/system_arch/)  |  ![image.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/MAeqxYDQEpgdO8j9/img/b396642d-0f50-4cca-afae-c3b818282e2b.png)  |   |  1.  知识库：\n 1.多格式文档导入、自动分段向量化；命中检测\n 2.  应用：      Agent工作流；嵌入第三方；对话日志；访问限制；用量统计\n 3.系统管理       |  1.开箱即用\n 2.多格式多类型文档，在线/离线，文本自动拆分、向量化、RAG\n 3.无缝嵌入:可以快速嵌入到第三方系统\n 4.灵活编排:工作流配置\n 5.模型中立:可自行接入其他大模型  |  模型：召回相似度Top N问题       |
+|  智谱AI  |  ![image](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ldVyDdEEvqBQN/img/193b8094-eea9-413c-8a32-faf9c5ed03aa.jpg) 参数设置：\n1.重排：文本得分+向量得分，权重分别为0.3和0.7       |   |  1.query改写\n 2.路由\n 3.多路召回\n 4.文本检索+向量检索（ES混合检索）  |   |   |
 
 **大模型技术框架调研**
 * 调研[LangChain](https://github.com/langchain-ai/langchain)、[LlamaIndex](https://github.com/run-llama/llama_index)等技术框架
 
 |   |  功能模块  |  具体功能  |  应用场景  |  缺点  |
 | --- | --- | --- | --- | --- |
-|  Langchain （适合复杂的对话系统，如聊天机器人，智能助手）  |  1.模板 2.Agent 3.Chain 4.记忆 5.提示工程 6.模型接口 7.文档QA  | 1.从文档生成QA对 2.多轮对话记忆 3.根据输入内容路由到指定的链       |  1.更适合构建面向企业的、可以产生收入的产品。这些产品需要支持多种模型接口、提供丰富的功能和优化的性能。2.适用于需要构建更加复杂的对话系统的场景，如聊天机器人、智能助手等。       | 1.抽象程度较高，可能增加代码复杂性和学习成本。2.在某些情况下可能不够灵活，限制了底层代码的编写和调试。       |
-|  LlamaIndex  |  数据连接 索引构建 查询接口  |   |  1.更适合用于构建RAG系统，提升大型语言模型在处理长文本或大量数据时的查询效率。 2.提供简化的数据索引和查询能力。3.适用于需要处理大量数据、对查询性能有较高要求的场景，如搜索引擎、推荐系统等。       |  1.功能相对单一，主要侧重于检索和索引，不如LangChain功能丰富。2.对模型接口的支持较少，可能限制某些特定需求的实现。       |
+|  Langchain （适合复杂的对话系统，如聊天机器人，智能助手）  |  模板\n Agent\n Chain\n 记忆\n 提示工程\n 模型接口\n 文档QA  | 1.从文档生成QA对\n 2.多轮对话记忆\n 3.根据输入内容路由到指定的链       |  1.更适合构建面向企业的、可以产生收入的产品。这些产品需要支持多种模型接口、提供丰富的功能和优化的性能。\n 2.适用于需要构建更加复杂的对话系统的场景，如聊天机器人、智能助手等。       | 1.抽象程度较高，可能增加代码复杂性和学习成本。\n 2.在某些情况下可能不够灵活，限制了底层代码的编写和调试。       |
+|  LlamaIndex  |  数据连接\n 索引构建\n 查询接口  |   |  1.更适合用于构建RAG系统，提升大型语言模型在处理长文本或大量数据时的查询效率。\n 2.提供简化的数据索引和查询能力。\n 3.适用于需要处理大量数据、对查询性能有较高要求的场景，如搜索引擎、推荐系统等。       |  1.功能相对单一，主要侧重于检索和索引，不如LangChain功能丰富。\n 2.对模型接口的支持较少，可能限制某些特定需求的实现。       |
 
 **大模型技术调研**
 * 调研RAG、Function Calling、RAGFlow等技术的原理，以及在搜索时的具体应用场景和作用
 |   |  原理  |  核心组件  |  适用场景  |  优点  |  缺点  |
 | --- | --- | --- | --- | --- | --- |
-|  RAG  |  外部知识库中检索相关信息来增强语言模型的回答能力  |  1.信息检索 2.文本生成  |  需要处理大量数据和复杂查询的场景，如知识问答、文档检索等  | 1.解决大语言模型的知识过期和细分领域的幻觉问题。 2.增强模型生成能力，提供更准确、更丰富的回答       |  1.需要预先构建和维护知识库，增加系统复杂性  2.对于实时性和非公开数据的处理能力有限       |
-|  RAGFlow  |  ![image](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ldVyDdEEvqBQN/img/d5cc8ac6-1b7f-48ca-baeb-682f30f831a4.jpg)  |  多路召回  |   |   |   |
-|  Function Calling  |  将用户的自然语言请求转换为可执行的函数调用，并生成符合预定义函数签名的结构化输出，如JSON对象  |1.系统接收用户问题并检查是否有可用函数 2.系统生成工具调用请求（ToolCall），应用程序执行请求的函数，并返回结果。 3.系统返回函数的响应（ToolCallResponse），生成最终的用户响应       |  需要实时数据或特定服务的场景，如天气预报、股票信息查询等  |  1.灵活的方式来扩展语言模型的能力，允许模型调用外部API或服务 2.可以获取实时数据，解决大模型知识滞后的问题       | 1.开发者定义和维护外部函数，增加开发和维护的复杂性  2.函数调用的准确性和可靠性依赖于外部服务的稳定性和响应时间       |
+|  RAG  |  外部知识库中检索相关信息来增强语言模型的回答能力  |  信息检索\n 2.文本生成  |  需要处理大量数据和复杂查询的场景，如知识问答、文档检索等  | 1.解决大语言模型的知识过期和细分领域的幻觉问题。\n 2.增强模型生成能力，提供更准确、更丰富的回答       |  1.需要预先构建和维护知识库，增加系统复杂性\n  2.对于实时性和非公开数据的处理能力有限       |
+|  RAGFlow  |  ![image](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ldVyDdEEvqBQN/img/d5cc8ac6-1b7f-48ca-baeb-682f30f831a4.jpg)  |  多路召回  | null  | null  | null  |
+|  Function Calling  |  将用户的自然语言请求转换为可执行的函数调用，并生成符合预定义函数签名的结构化输出，如JSON对象  |1.系统接收用户问题并检查是否有可用函数\n 2.系统生成工具调用请求（ToolCall），应用程序执行请求的函数，并返回结果。\n 3.系统返回函数的响应（ToolCallResponse），生成最终的用户响应       |  需要实时数据或特定服务的场景，如天气预报、股票信息查询等  |  1.灵活的方式来扩展语言模型的能力，允许模型调用外部API或服务\n 2.可以获取实时数据，解决大模型知识滞后的问题       | 1.开发者定义和维护外部函数，增加开发和维护的复杂性\n  2.函数调用的准确性和可靠性依赖于外部服务的稳定性和响应时间       |
 
 
 ## MVP产品框架
