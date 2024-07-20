@@ -8,15 +8,13 @@
 根据业务目标，调研实现不同任务需要的功能
 ![image](https://github.com/user-attachments/assets/dbeeeff9-d0ef-4d50-8729-1f037c4da89f)
 
-
-**MVP**
+**MVP产品功能**
 为保证系统快速上线，功能能够满足用户的基本需求，同时保证上线后的问答效果，提出MVP方案。功能设计需要保证后续迭代的可以实现正常的功能叠加，减少二次开发过程
-* 功能
 ![image](https://github.com/user-attachments/assets/10ba8c6e-1934-4d1e-a110-ef66bff09d98)
 
 **分类规划**
 * FAQ
-  ** 由于
+由于
 * 文档问答
 * 任务型对话
 * RPA规划
@@ -26,7 +24,7 @@
 
 |   |  原理（流程图）  |  支持任务  |  功能点  |  优点  |  缺点  |
 | --- | --- | --- | --- | --- | --- |
-|  RASA  |  Rasa基于意图的问答 ![rasa-流程图.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/MAeqxYDQEpgdO8j9/img/24130173-e09b-4319-9d0d-5725da474ab9.png) Rasa基于LLM和RAG的意图分类 ![image](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/MAeqxYDQEpgdO8j9/img/7678f410-c217-4129-afac-2e4cd68b494d.png)  |  FAQ问答  |  意图识别 实体抽取 上下文记忆 自定义动作  |  *   支持纯本地部署      *   具有模块化框架      *   可以外接知识图谱      *   可自定义回复动作       |  功能缺点： *   不能进行文档问答      模型缺点： *   组件的ML和DL模型组件过时      *   每次更新示例时需要重新训练       |
+|  RASA  |  Rasa基于意图的问答 ![rasa-流程图.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/MAeqxYDQEpgdO8j9/img/24130173-e09b-4319-9d0d-5725da474ab9.png) Rasa基于LLM和RAG的意图分类 ![image](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/MAeqxYDQEpgdO8j9/img/7678f410-c217-4129-afac-2e4cd68b494d.png)  |  FAQ问答  |  意图识别 实体抽取 上下文记忆 自定义动作  |1.支持纯本地部署\2.具有模块化框架\3.可以外接知识图谱\4.可自定义回复动作       |  功能缺点：\1.不能进行文档问答\模型缺点：\1.组件的ML和DL模型组件过时\2.每次更新示例时需要重新训练       |
 |  [QAnything](https://qanything.ai/docs/introduce)  |  基于RAG的两阶段检索机制，结合信息检索和文本生成![image.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/MAeqxYDQEpgdO8j9/img/3312fb3c-66cd-4a09-89bf-1b6873e351d1.png) 参数设置： *   检索：不设置阈值，返回TOP K      *   重排：阈值0.35       |  文档问答 FAQ问答  |  文档解析 混合检索（BM25+向量检索） 联网检索 业务场景定制 对话日志  |  *   支持纯本地部署      *   无文档数量上限      *   问答准确率高      *   支持多语言       |  数据侧： *   处理非结构化文档存在困难      *   从图片、pdf等非文本格式提取信息      *   文档数量增加，检索速度和生成效率      模型侧： *   大模型计算资源消耗大      *   对特定领域数据的依赖等问题       |
 |  [MaxKB](https://maxkb.cn/docs/system_arch/)  |  ![image.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/MAeqxYDQEpgdO8j9/img/b396642d-0f50-4cca-afae-c3b818282e2b.png)  |   |  1.  知识库：      多格式文档导入、自动分段向量化；命中检测 2.  应用：      Agent工作流；嵌入第三方；对话日志；访问限制；用量统计 1.  系统管理       |  *   开箱即用      多格式多类型文档，在线/离线，文本自动拆分、向量化、RAG *   无缝嵌入      可以快速嵌入到第三方系统 *   灵活编排      工作流配置 *   模型中立      可自行接入其他大模型  |  模型： *   召回相似度Top N问题       |
 |  智谱AI  |  ![image](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ldVyDdEEvqBQN/img/193b8094-eea9-413c-8a32-faf9c5ed03aa.jpg) 参数设置： *   重排：文本得分+向量得分，权重分别为0.3和0.7       |   |  query改写 路由 多路召回 文本检索+向量检索（ES混合检索）  |   |   |
