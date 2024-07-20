@@ -6,7 +6,8 @@
 根据数据特点，和业务需要实现的目标，规划FAQ、文档问答、任务型对话和RPA的建设<br>
 ### 任务
 根据业务目标，调研实现不同任务需要的功能
-![image](https://github.com/user-attachments/assets/dbeeeff9-d0ef-4d50-8729-1f037c4da89f)
+![1721490831951](https://github.com/user-attachments/assets/7f4d6796-39de-4205-9cf3-aaf619bcf352)
+
 
 ### 分类规划
 * FAQ<br>
