@@ -62,7 +62,8 @@
 
 ### 用户流程
 
-![image](https://github.com/user-attachments/assets/32eb6f87-beda-44ce-9eca-78f9674fe14f)
+![1721481295641](https://github.com/user-attachments/assets/2a350342-4f2a-4fb2-88e4-5de68d14705f)
+
 
 
 
