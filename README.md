@@ -49,9 +49,22 @@
 
 ## MVP产品框架
 ### 系统架构
+
+关键词搜索和语义搜索的区别，哪个场景应该用什么，具体的搜索场景和实现
+
+![image](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/a/pL39ogwlbIg4VPBD/88470f7b89df442e80562a975a9d687c2421.png)
+
+
 ### FAQ框架
+
+![image.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/MAeqxYDQEpgdO8j9/img/54dbd950-9c5a-43ee-8ee6-78cc00569481.png)
+
+
 ### 用户流程
-### 功能需求
+
+![image](https://github.com/user-attachments/assets/32eb6f87-beda-44ce-9eca-78f9674fe14f)
+
+
 
 ## 问答测试
 ### 测试指标
