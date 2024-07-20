@@ -52,7 +52,8 @@
 
 关键词搜索和语义搜索的区别，哪个场景应该用什么，具体的搜索场景和实现
 
-![image](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/a/pL39ogwlbIg4VPBD/88470f7b89df442e80562a975a9d687c2421.png)
+![image](https://github.com/user-attachments/assets/51c225b3-33d4-435b-a703-bd1e2d3a9b4f)
+
 
 
 ### FAQ框架
