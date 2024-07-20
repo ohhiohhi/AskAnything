@@ -51,8 +51,8 @@
 ### 系统架构
 
 关键词搜索和语义搜索的区别，哪个场景应该用什么，具体的搜索场景和实现
+![image](https://github.com/user-attachments/assets/7685e72b-a10a-4e81-a255-32397938239e)
 
-![image](https://github.com/user-attachments/assets/51c225b3-33d4-435b-a703-bd1e2d3a9b4f)
 
 
 
